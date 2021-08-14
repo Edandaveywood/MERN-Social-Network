@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://edan123:edan123@socialnetwork.upyq9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-  "jwtSecret": "mySecretToken"
+  "jwtSecret": "mySecretToken",
+  "githubClientID": "705c8d80366eeb2ce61c",
+  "githubSecret": "3c6b4d8266574a6038435e71d26059727111cf63"
 }
