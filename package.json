@@ -1,34 +1,35 @@
 {
-  "name": "mern_social_network",
-  "version": "1.0.0",
-  "description": "Udemy Social Network MERN Course",
-  "main": "server.js",
-  "scripts": {
-	"start": "node server",
-	"server": "nodemon server",
-	"client": "npm start --prefix client",
-	"dev": "concurrently \"npm run server\" \"npm run client\""
-  },
-  "keywords": [],
-  "author": "Edan Davey Wood",
-  "license": "MIT",
-  "dependencies": {
-	"bcryptjs": "^2.4.3",
-	"config": "^3.3.6",
-	"express": "^4.17.1",
-	"express-validator": "^6.12.1",
-	"gravatar": "^1.8.1",
-	"jsonwebtoken": "^8.5.1",
-	"mongoose": "^5.13.6",
-	"request": "^2.88.2"
-  },
-  "devDependencies": {
-	"concurrently": "^6.2.1",
-	"nodemon": "^2.0.12",
-	"prettier": "^2.3.2"
+	"name": "mern_social_network",
+	"version": "1.0.0",
+	"description": "Udemy Social Network MERN Course",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server",
+		"server": "nodemon server",
+		"client": "npm start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
+	},
+	"keywords": [],
+	"author": "Edan Davey Wood",
+	"license": "MIT",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"config": "^3.3.6",
+		"express": "^4.17.1",
+		"express-validator": "^6.12.1",
+		"gravatar": "^1.8.1",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^5.13.6",
+		"request": "^2.88.2",
+		"uuid": "^8.3.2"
+	},
+	"devDependencies": {
+		"concurrently": "^6.2.1",
+		"nodemon": "^2.0.12",
+		"prettier": "^2.3.2"
 	},
 	"prettier": {
-	  "useTabs": true,
-	  "jsxSingleQuote": true
+		"useTabs": true,
+		"jsxSingleQuote": true
 	}
 }
