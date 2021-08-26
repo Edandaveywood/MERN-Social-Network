@@ -72,7 +72,10 @@ router.post(
 			? (profileFields.githubusername = githubusername)
 			: undefined;
 		skills
-			? (profileFields.skills = skills.split(",").map((skill) => skill.trim()))
+			? (profileFields.skills = skills
+					.toString()
+					.split(",")
+					.map((skill) => " " + skill.trim()))
 			: undefined;
 
 		// Build social object
