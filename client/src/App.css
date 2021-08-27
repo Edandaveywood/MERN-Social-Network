@@ -407,10 +407,12 @@ button {
 
 .profile-exp {
   grid-area: exp;
+  padding: 1rem;
 }
 
 .profile-edu {
   grid-area: edu;
+  padding: 1rem;
 }
 
 .profile-exp h2,
