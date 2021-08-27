@@ -6,6 +6,7 @@ import ProfileTop from "./ProfileTop";
 import ProfileAbout from "./ProfileAbout";
 import ProfileExperience from "./ProfileExperience";
 import ProfileEducation from "./ProfileEducation";
+import ProfileGitHub from "./ProfileGitHub";
 import { getProfileById } from "../../actions/profile";
 import { Link } from "react-router-dom";
 
@@ -68,6 +69,9 @@ const Profile = ({
 								<h4>No education credentials</h4>
 							)}
 						</div>
+						{profile.githubusername && (
+							<ProfileGitHub username={profile.githubusername} />
+						)}
 					</div>
 				</Fragment>
 			)}
