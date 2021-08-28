@@ -64,28 +64,40 @@ router.post(
 		// Build profile object
 		const profileFields = {};
 		profileFields.user = req.user.id;
-		company ? (profileFields.company = company) : undefined;
-		website ? (profileFields.website = website) : undefined;
-		location ? (profileFields.location = location) : undefined;
-		bio ? (profileFields.bio = bio) : undefined;
-		status ? (profileFields.status = status) : undefined;
+		company ? (profileFields.company = company) : (profileFields.company = "");
+		website ? (profileFields.website = website) : (profileFields.website = "");
+		location
+			? (profileFields.location = location)
+			: (profileFields.location = "");
+		bio ? (profileFields.bio = bio) : (profileFields.bio = "");
+		status ? (profileFields.status = status) : (profileFields.status = "");
 		githubusername
 			? (profileFields.githubusername = githubusername)
-			: undefined;
+			: (profileFields.githubusername = "");
 		skills
 			? (profileFields.skills = skills
 					.toString()
 					.split(",")
 					.map((skill) => " " + skill.trim()))
-			: undefined;
+			: (profileFields.skills = "");
 
 		// Build social object
 		profileFields.social = {};
-		youtube ? (profileFields.social.youtube = youtube) : undefined;
-		twitter ? (profileFields.social.twitter = twitter) : undefined;
-		facebook ? (profileFields.social.facebook = facebook) : undefined;
-		instagram ? (profileFields.social.instagram = instagram) : undefined;
-		linkedin ? (profileFields.social.linkedin = linkedin) : undefined;
+		youtube
+			? (profileFields.social.youtube = youtube)
+			: (profileFields.youtube = "");
+		twitter
+			? (profileFields.social.twitter = twitter)
+			: (profileFields.twitter = "");
+		facebook
+			? (profileFields.social.facebook = facebook)
+			: (profileFields.facebook = "");
+		instagram
+			? (profileFields.social.instagram = instagram)
+			: (profileFields.instagram = "");
+		linkedin
+			? (profileFields.social.linkedin = linkedin)
+			: (profileFields.linkedin = "");
 
 		try {
 			let profile = await Profile.findOne({ user: req.user.id });
